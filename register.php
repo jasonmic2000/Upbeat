@@ -2,12 +2,41 @@
 
 <?php
 
+function sanitizeFormPassword($inputText){
+    $inputText = strip_tags($inputText);
+    return $inputText;
+}
+
+function sanitizeFormUsername($inputText){
+    $inputText = strip_tags($inputText);
+    $inputText = str_replace(" ","",$inputText);
+    return $inputText;
+}
+
+function sanitizeFormName($inputText){
+    $inputText = strip_tags($inputText);
+    $inputText = str_replace(" ","",$inputText);
+    $inputText = ucfirst(strtolower($inputText));
+    return $inputText;
+}
+
 if(isset($_POST['loginButton'])) {
     //Login button was pressed;
 }
 
 if(isset($_POST['registerButton'])) {
     //Register button was pressed;
+    $username = sanitizeFormUsername($_POST['username']);
+    
+    $firstName = sanitizeFormName($_POST['firstName']);
+    $lastName = sanitizeFormName($_POST['lastName']);
+    
+    $email = sanitizeFormUsername($_POST['email']);
+    $email2 = sanitizeFormUsername($_POST['email2']);
+
+    $password = sanitizeFormPassword($_POST['password']);
+    $password = sanitizeFormPassword($_POST['password2']);
+
 }
 
 ?>
@@ -17,7 +46,7 @@ if(isset($_POST['registerButton'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Slotify!</title>
+    <title>Welcome to Upbeat!</title>
 </head>
 <body>
     <div id="inputContainer">
@@ -41,8 +70,8 @@ if(isset($_POST['registerButton'])) {
         <form id="registerForm" action="register.php" method="POST">
             <h2>Create your free account</h2>
             <p>
-                <label for="Username">Username: </label>
-                <input id="Username" name="loginUsername" type="text" placeholder="e.g. bartSimpson" required>
+                <label for="username">Username: </label>
+                <input id="username" name="username" type="text" placeholder="e.g. bartSimpson" required>
             </p>
 
             <p>
