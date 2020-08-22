@@ -2,9 +2,11 @@
 
     class Account {
 
+        private $con;
         private $errorArray;
 
-        public function __construct() {
+        public function __construct($con) {
+            $this->con = $con;
             $this->errorArray = array();
         }
 
@@ -17,7 +19,7 @@
 
             if(empty($this->errorArray) == true) {
                 //Insert into database
-                return true;
+                return $this->insertUserDetails($username,$firstName,$lastName,$email,$password);
             }
             else {
                 return false;
@@ -32,6 +34,16 @@
             return "<span class='errorMessage'>$error</span>";
         }
 
+        private function insertUserDetails($username,$firstName,$lastName,$email,$password) {
+            $encryptedPassword = md5($password);
+            $profilePic = "assets/images/profile-pics/profile-icon.png";
+            $date = date("Y-m-d");
+
+            $result = mysqli_query($this->con, "INSERT INTO users VALUES ('', '$username', '$firstName', '$lastName', '$email', '$encryptedPassword', '$date', '$profilePic')");
+
+            return $result;
+        }
+
         private function validateUsername($username) {
             
             if(strlen($username) > 25 || strlen($username) < 5) {
@@ -40,6 +52,10 @@
             }
 
             //To-do check if username exists
+            $checkUsernameQuery = mysqli_query($this->con, "SELECT username FROM users WHERE username='$username'");
+            if(mysqli_num_rows($checkUsernameQuery) != 0) {
+                array_push($this->errorArray, Constants::$usernameTaken);
+            }
         }
 
         private function validateFirstName($firstName) {
@@ -68,6 +84,10 @@
             }
 
             //To-do check if email is already used
+            $checkEmailQuery = mysqli_query($this->con, "SELECT email FROM users WHERE email='$email'");
+            if(mysqli_num_rows($checkEmailQuery) != 0) {
+                array_push($this->errorArray, Constants::$emailTaken);
+            }
         }
 
         private function validatePasswords($password, $password2) {
