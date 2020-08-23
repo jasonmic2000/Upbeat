@@ -1,0 +1,98 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+#background {
+    /* background-color:#000000;
+    background-image: url(../images/low-poly-bg.jpg); */
+    
+    /*Gradient Background*/
+    /* background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%); */
+    
+    /* Single Color Background */
+    background-color: #1a1a1d;
+
+    background-position: center;
+    background-size: cover;
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+#loginContainer * {
+    color: #ffffff;
+    font-family: "Quicksand";
+    font-weight: normal;
+    line-height: 1em;
+    box-sizing: border-box;
+}
+
+#loginContainer {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    max-width: 1024px;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color:    #4e4e50;
+}
+
+#inputContainer {
+    width: 400px;
+    padding: 45px;
+    float: left;
+    border-right: 1px solid #4e4e50;
+}
+
+#inputContainer h2 {
+    text-align: center;
+    color: #fff;
+}
+
+#inputContainer input[type='text'],
+#inputContainer input[type='email'],
+#inputContainer input[type='password'] {
+    display: block;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #950740;
+    width: 100%;
+    height: 27px;
+    line-height: 27px;
+}
+
+#inputContainer label {
+    color: #6f2232;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+#inputContainer button {
+    background-color: transparent;
+    border: 2px solid #c3073f;
+    border-radius: 250px;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 20px auto;
+    height: 41px;
+    width: 100%;
+}
+
+#inputContainer button:hover {
+    cursor: pointer;
+}
+
+.hasAccountText span {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.hasAccountText {
+    text-align: center;
+}
