@@ -16,107 +16,147 @@ else {
 <html>
 <head>
     <title>Welcome to Upbeat!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    
-    <div id="nowPlayingBarContainer">
-        <div id="nowPlayingBar">
-            <div id="nowPlayingLeft">
 
-                <div class="content">
-                    <span class="albumLink">
-                        <img class="albumArtwork" src="https://is4-ssl.mzstatic.com/image/thumb/Purple123/v4/9a/c1/5d/9ac15dd5-0614-52b5-6fe8-19df1b6dfad6/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/246x0w.png">
-                    </span>
+    <div id="maincontainer">
 
-                    <div class="trackInfo">
+        <div id="topContainer">
 
-                        <span class="trackName">
-                            <span>Happy Birthday</span>
-                        </span>
+            <div id="navBarContainer">
+                <nav class="navBar">
 
-                        <span class="artistName">
-                            <span>Jason Michael</span>
-                        </span>
+                    <a href="index.php" class="logo">
+                        <img src="assets/images/icons/vinyl.png" alt="">
+                    </a>
+
+                    <div class="group">
+                        <div class="navItem">
+                            <a href="search.php" class="navItemLink">Search <img src="assets/images/icons/search.png" class="icon" alt="Search"></a>
+                        </div>
+                    </div>
+
+                    <div class="group">
+
+                        <div class="navItem">
+                            <a href="browse.php" class="navItemLink">Browse</a>
+                        </div>
+                        <div class="navItem">
+                            <a href="yourMusic.php" class="navItemLink">Your Music</a>
+                        </div>
+                        <div class="navItem">
+                            <a href="profile.php" class="navItemLink">Jason Michael</a>
+                        </div>
 
                     </div>
 
-
-                </div>
-
+                </nav>
             </div>
 
-            <div id="nowPlayingCenter">
+        </div>
 
-                <div class="content playerControls">
+    
+    
+        <div id="nowPlayingBarContainer">
+            <div id="nowPlayingBar">
+                <div id="nowPlayingLeft">
 
-                    <div class="buttons">
-                        
-                        <button class="controlButton shuffle" title="Shuffle button">
-                            <img src="assets/images/icons/shuffle.png" alt="Shuffle">
-                        </button>
+                    <div class="content">
+                        <span class="albumLink">
+                            <img class="albumArtwork" src="https://is4-ssl.mzstatic.com/image/thumb/Purple123/v4/9a/c1/5d/9ac15dd5-0614-52b5-6fe8-19df1b6dfad6/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/246x0w.png">
+                        </span>
 
-                        <button class="controlButton previous" title="Previous button">
-                            <img src="assets/images/icons/previous.png" alt="Previous">
-                        </button>
+                        <div class="trackInfo">
 
-                        <button class="controlButton play" title="Play button">
-                            <img src="assets/images/icons/play.png" alt="Play">
-                        </button>
+                            <span class="trackName">
+                                <span>Happy Birthday</span>
+                            </span>
 
-                        <button class="controlButton pause" title="Pause button" style="display: none">
-                            <img src="assets/images/icons/pause.png" alt="Pause">
-                        </button>
-
-                        <button class="controlButton next" title="Next button">
-                            <img src="assets/images/icons/next.png" alt="Next">
-                        </button>
-
-                        <button class="controlButton shuffle" title="Repeat button">
-                            <img src="assets/images/icons/repeat.png" alt="Repeat">
-                        </button>
-
-                    </div>
-
-                    <div class="playbackBar">
-
-                        <span class="progressTime current">0.00</span>
-                        
-                        <div class="progressBar">
-
-                            <div class="progressBarBg">
-                                <div class="progress"></div>
-                            </div>
+                            <span class="artistName">
+                                <span>Jason Michael</span>
+                            </span>
 
                         </div>
-                        <span class="progressTime remaining">0.00</span>
+
 
                     </div>
-                    
+
                 </div>
 
-            </div>
+                <div id="nowPlayingCenter">
 
-            <div id="nowPlayingRight">
-                <div class="volumeBar">
+                    <div class="content playerControls">
 
-                    <button class="controlButton volume" title="Volume button">
-                        <img src="assets/images/icons/volume.png" alt="Volume">
-                    </button>
+                        <div class="buttons">
+                            
+                            <button class="controlButton shuffle" title="Shuffle button">
+                                <img src="assets/images/icons/shuffle.png" alt="Shuffle">
+                            </button>
 
-                    <div class="progressBar">
+                            <button class="controlButton previous" title="Previous button">
+                                <img src="assets/images/icons/previous.png" alt="Previous">
+                            </button>
 
-                            <div class="progressBarBg">
-                                <div class="progress"></div>
+                            <button class="controlButton play" title="Play button">
+                                <img src="assets/images/icons/play.png" alt="Play">
+                            </button>
+
+                            <button class="controlButton pause" title="Pause button" style="display: none">
+                                <img src="assets/images/icons/pause.png" alt="Pause">
+                            </button>
+
+                            <button class="controlButton next" title="Next button">
+                                <img src="assets/images/icons/next.png" alt="Next">
+                            </button>
+
+                            <button class="controlButton shuffle" title="Repeat button">
+                                <img src="assets/images/icons/repeat.png" alt="Repeat">
+                            </button>
+
+                        </div>
+
+                        <div class="playbackBar">
+
+                            <span class="progressTime current">0.00</span>
+                            
+                            <div class="progressBar">
+
+                                <div class="progressBarBg">
+                                    <div class="progress"></div>
+                                </div>
+
                             </div>
+                            <span class="progressTime remaining">0.00</span>
 
+                        </div>
+                        
                     </div>
 
+                </div>
+
+                <div id="nowPlayingRight">
+                    <div class="volumeBar">
+
+                        <button class="controlButton volume" title="Volume button">
+                            <img src="assets/images/icons/volume.png" alt="Volume">
+                        </button>
+
+                        <div class="progressBar">
+
+                                <div class="progressBarBg">
+                                    <div class="progress"></div>
+                                </div>
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+    </div>    
 
 
 </body>
