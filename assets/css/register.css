@@ -13,15 +13,15 @@ html, body {
 }
 
 #background {
-    /* background-color:#000000;
-    background-image: url(../images/low-poly-bg.jpg); */
+    background-color:#000000;
+    background-image: url(../images/Rick.png);
     
     /*Gradient Background*/
     /* background-color: #FF3CAC;
     background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
      */   
      /* Single Color Background */
-    background-color: var(--second-dark);
+    /* background-color: var(--second-dark); */
 
     background-position: center;
     background-size: cover;
