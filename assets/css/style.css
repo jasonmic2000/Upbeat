@@ -18,6 +18,12 @@ html, body {
     color: #fff;
 }
 
+body {
+    background-color: var(--highlights);
+    font-size: 14px;
+    min-width: 720px;
+}
+
 #nowPlayingBarContainer {
     width: 100%;
     background-color: var(--second-dark);
@@ -210,4 +216,14 @@ html, body {
     right: 0;
     top: 6px;
     width: 25px;
+}
+
+#mainViewContainer {
+    width: calc(100% - 220px);
+    margin-left: 220px;
+    padding-bottom: 90px;
+}
+
+#mainContent {
+    padding: 0 20px;
 }
