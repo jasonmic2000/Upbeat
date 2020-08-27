@@ -16,10 +16,11 @@ html, body {
 * {
     font-family: 'Quicksand';
     color: #fff;
+    letter-spacing: 1px;
 }
 
 body {
-    background-color: var(--highlights);
+    background-color: var(--third-dark);
     font-size: 14px;
     min-width: 720px;
 }
@@ -208,7 +209,7 @@ body {
 }
 
 .navItemLink:hover {
-    color: var(--secondary);
+    color: var(--primary);
 }
 
 .navItemLink .icon {
@@ -226,4 +227,40 @@ body {
 
 #mainContent {
     padding: 0 20px;
+}
+
+.pageHeadingBig {
+    padding: 20px;
+    text-align: center;
+}
+
+.gridViewItem {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 29%;
+    max-width: 200px;
+    min-width: 150px;
+}
+
+.gridViewItem img {
+    width: 100%;
+}
+
+.gridViewInfo {
+    font-weight: 500;
+    text-align: center;
+    padding: 5px 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: 0.5s;
+}
+
+.gridViewItem:hover .gridViewInfo {
+    color: var(--primary);
+}
+
+.gridViewItem a {
+    text-decoration: none;
 }
