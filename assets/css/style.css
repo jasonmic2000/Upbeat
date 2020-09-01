@@ -294,7 +294,86 @@ body {
     font-size: 28px;
 }
 
-.entityInfo .rightSection span {
+.entityInfo .rightSection p {
     color: var(--highlights);
     font-weight: 200;
+}
+
+.trackList {
+    padding: 0;
+}
+
+.trackListRow {
+    height: 40px;
+    padding: 15px 10px;
+    list-style: none;
+}
+
+.trackListRow span {
+    color: var(--highlights);
+    font-weight: 200;
+}
+
+.trackListRow:hover {
+    background-color: var(--second-dark);
+}
+
+.trackListRow .trackCount {
+    width: 8%;
+    float: left;
+}
+
+.trackListRow .trackCount img {
+    width: 20px;
+    visibility: hidden;
+    position: absolute;
+    cursor: pointer;
+}
+
+.trackListRow:hover .trackCount img {
+    visibility: visible;
+}
+
+.trackListRow .trackCount span {
+    visibility: visible;
+}
+
+.trackListRow:hover .trackCount span {
+    visibility: hidden;
+}
+
+.trackListRow .trackInfo {
+    width: 75%;
+    float: left;
+}
+
+.trackListRow .trackInfo .trackName {
+    color: white;
+    font-weight: 400;
+    margin-bottom: 7px;
+}
+
+.trackListRow .trackInfo span {
+    display: block;
+}
+
+.trackListRow .trackOptions {
+    width: 5%;
+    float: left;
+    text-align: right;
+}
+
+.trackListRow .trackOptions img {
+    width: 15px;
+    visibility: hidden;
+}
+
+.trackListRow:hover .trackOptions img {
+    visibility: visible;
+}
+
+.trackListRow .trackDuration {
+    width: 12%;
+    float: left;
+    text-align: right;
 }
