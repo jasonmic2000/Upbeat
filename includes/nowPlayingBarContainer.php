@@ -21,7 +21,25 @@ $(document).ready(function() {
 
 function setTrack(trackId, newPlaylist, play) {
     
-    audioElement.setTrack("assets/music/03 Centuries.mp3");
+    $.post("includes/handlers/ajax/getSongJson.php", { songId: trackId }, function(data) {
+        
+        var track = JSON.parse(data);
+
+        $(".trackName span").text(track.title);
+
+        $.post("includes/handlers/ajax/getArtistJson.php", { artistId: track.artist }, function(data) {
+            var artist = JSON.parse(data);
+            $(".artistName span").text(artist.name);
+        }); 
+
+        $.post("includes/handlers/ajax/getAlbumJson.php", { albumId: track.album }, function(data) {
+            var album = JSON.parse(data);
+            $(".albumLink img").attr("src", album.artworkPath);
+        }); 
+
+        audioElement.setTrack(track.path);
+        audioElement.play();
+    });
     
     if(play) {
         audioElement.play();
@@ -49,17 +67,17 @@ function pauseSong() {
 
             <div class="content">
                 <span class="albumLink">
-                    <img class="albumArtwork" src="https://is4-ssl.mzstatic.com/image/thumb/Purple123/v4/9a/c1/5d/9ac15dd5-0614-52b5-6fe8-19df1b6dfad6/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/246x0w.png">
+                    <img class="albumArtwork" src="">
                 </span>
 
                 <div class="trackInfo">
 
                     <span class="trackName">
-                        <span>Happy Birthday</span>
+                        <span></span>
                     </span>
 
                     <span class="artistName">
-                        <span>Jason Michael</span>
+                        <span></span>
                     </span>
 
                 </div>
