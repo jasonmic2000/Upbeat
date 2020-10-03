@@ -1,7 +1,7 @@
 <div id="navBarContainer">
     <nav class="navBar">
 
-        <span class="logo" onclick="openPage('index.php')">
+        <span class="logo" role="link" tabindex="0" onclick="openPage('index.php')">
             <img src="assets/images/icons/vinyl.png" alt="">
         </span>
 
