@@ -245,6 +245,8 @@ body {
 
 .gridViewItem img {
     width: 100%;
+    margin-top: 20px;
+
 }
 
 .gridViewInfo {
@@ -255,7 +257,7 @@ body {
     overflow: hidden;
     white-space: nowrap;
     transition: 0.5s;
-}
+}    
 
 .gridViewItem:hover .gridViewInfo {
     color: var(--primary);
@@ -392,10 +394,24 @@ body {
     border: 2px solid var(--highlights);
     border-radius: 15px;
     min-width: 130px;
+    padding: 5px
 }
 
 .button.blue {
     background-color: var(--primary);
     border-color: var(--primary);
     color: var(--darkest);
+}
+
+.borderBottom {
+    border-bottom: 1px solid var(--highlights);
+}
+
+.trackListContainer h2,
+.gridViewContainer h2 {
+    text-align: center;
+}
+
+[role="link"] {
+    cursor: pointer;
 }
