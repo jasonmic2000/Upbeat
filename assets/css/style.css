@@ -394,7 +394,7 @@ body {
     border: 2px solid var(--highlights);
     border-radius: 15px;
     min-width: 130px;
-    padding: 5px
+    padding: 5px 20px 5px 20px;
 }
 
 .button.blue {
@@ -461,4 +461,13 @@ button:focus {
 .noResults {
     display: block;
     margin: 15px;
+}
+
+.buttonItems .button {
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.playlistContainer {
+    padding: 10px 0;
 }
