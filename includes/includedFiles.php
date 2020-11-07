@@ -12,6 +12,7 @@ if(isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
     }
     else {
         echo "Username variable was not passed into the page. Check openPage JS function.";
+        exit();
     }
 }
 else {
