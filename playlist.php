@@ -13,13 +13,14 @@ $owner = new User($con, $playlist->getOwner());
 
 <div class="entityInfo">
     <div class="leftSection">
-        <img src="<?php echo $album->getArtworkPath(); ?>" alt="">
+        <img src="assets/images/icons/player-colored/playlist.png">
     </div>
 
     <div class="rightSection">
-        <h2><?php echo $album->getTitle(); ?></h2>
-        <p>By <?php echo $artist->getName(); ?></p>
-        <p><?php echo $album->getNumberOfSongs(); ?> songs</p>
+        <h2><?php echo $playlist->getName(); ?></h2>
+        <p>By <?php echo $playlist->getOwner(); ?></p>
+        <p><?php echo $playlist->getNumberOfSongs(); ?> songs</p>
+        <button class="button">Delete Playlist</button>
     </div>
 </div>
 
@@ -28,7 +29,7 @@ $owner = new User($con, $playlist->getOwner());
 
         <?php
 
-        $songIdArray = $album->getSongIds();
+        $songIdArray = array();//$album->getSongIds();
 
         $i = 1;
         foreach ($songIdArray as $songId) {
