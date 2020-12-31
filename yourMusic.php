@@ -13,27 +13,29 @@ include("includes/includedFiles.php");
         </div>
 
         <?php
-        $username = $userLoggedIn->getUsername();
+            $username = $userLoggedIn->getUsername();
 
-        $playlistQuery = mysqli_query($con, "SELECT * FROM playlists WHERE owner = '$username'");
+            $playlistQuery = mysqli_query($con, "SELECT * FROM playlists WHERE owner = '$username'");
 
-        if (mysqli_num_rows($playlistQuery) == 0) {
-            echo "<span class='noResults'>You don't have any playlists yet</span>";
-        }
+            if (mysqli_num_rows($playlistQuery) == 0) {
+                echo "<span class='noResults'>You don't have any playlists yet</span>";
+            }
 
-        while ($row = mysqli_fetch_array($playlistQuery)) {
+            while ($row = mysqli_fetch_array($playlistQuery)) {
 
-            echo "<div class='gridViewItem'>
+                $playlist = new Playlist($con, $row);
 
-                    <div class='playlistImage'>
-                        <img src='assets/images/icons/playlist.png'>                    
-                    </div>
+                echo "<div class='gridViewItem' role='link' tabindex='0' onclick='openPage(\"playlist.php?id=" . $playlist->getId() . "\")'>
 
-                    <div class='gridViewInfo'>"
-                        . $row['name'] .
-                    "</div>   
+                        <div class='playlistImage'>
+                            <img src='assets/images/icons/playlist.png'>                    
+                        </div>
 
-                </div>";
+                        <div class='gridViewInfo'>"
+                            . $playlist->getName() .
+                        "</div>   
+
+                    </div>";
         }
         ?>
 

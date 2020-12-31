@@ -471,3 +471,12 @@ button:focus {
 .playlistContainer {
     padding: 10px 0;
 }
+
+.playlistImage {
+    border: 3px solid var(--highlights);
+    padding: 10px;
+}
+
+.playlistImage img {
+    margin-top: 0px
+}
