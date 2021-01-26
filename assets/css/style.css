@@ -480,3 +480,37 @@ button:focus {
 .playlistImage img {
     margin-top: 0px
 }
+
+.optionsMenu {
+    position: fixed;
+    background-color: var(--second-dark);
+    width: 200;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    z-index: 1000;
+    display: none;
+}
+
+.optionsMenu .item {
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-weight: 400;
+    color: var(--highlights);
+    cursor: pointer;
+    height: 40px;
+    background-color: var(--second-dark);
+    font-size: 14px;
+}
+
+.optionsMenu .item:hover {
+    color: #fff;
+    background-color: var(--darkest);
+    border-color: var(--darkest);
+}
+
+.optionsMenu select {
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
