@@ -31,7 +31,7 @@ if (isset($_GET['term'])) {
     })
 </script>
 
-<?php if($term == "") exit(); ?>
+<?php if ($term == "") exit(); ?>
 
 <div class="trackListContainer borderBottom">
     <h2>SONGS</h2>
@@ -71,7 +71,8 @@ if (isset($_GET['term'])) {
                     </div>
 
                     <div class='trackOptions'>
-                        <img class='optionsButton' src='assets/images/icons/player/more.png'>
+                        <input type='hidden' class='songId' value='" . $albumSong->getId() . "'>
+                        <img class='optionsButton' src='assets/images/icons/player/more.png' onclick='showOptionsMenu(this)'>
                     </div>
 
                     <div class='trackDuration'>
@@ -151,3 +152,9 @@ if (isset($_GET['term'])) {
     ?>
 
 </div>
+
+<nav class="optionsMenu">
+    <input type="hidden" class="songId">
+    <?php echo Playlist::getPlaylistsDropdown($con, $userLoggedIn->getUsername()); ?>
+
+</nav>
