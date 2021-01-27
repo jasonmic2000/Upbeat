@@ -49,6 +49,7 @@ $artist = $album->getArtist();
                     </div>
 
                     <div class='trackOptions'>
+                        <input type='hidden' class='songId' value='" . $albumSong->getId() . "'>
                         <img class='optionsButton' src='assets/images/icons/player/more.png' onclick='showOptionsMenu(this)'>
                     </div>
 
