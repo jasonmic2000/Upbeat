@@ -1,0 +1,6 @@
+  --darkest: #0b0c10;
+  --second-dark: #1f2833;
+  --third-dark: #435060;
+  --highlights: #c5c6c7;
+  --primary: #66fcf1;
+  --secondary: #45a29e;
